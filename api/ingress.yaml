@@ -6,6 +6,7 @@ metadata:
   labels:
     name: blog-api
 spec:
+  ingressClassName: nginx
   rules:
     - host: api.narumir.io
       http:
