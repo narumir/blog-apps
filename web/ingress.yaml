@@ -28,7 +28,7 @@ metadata:
   name: letsencrypt
   namespace: blog-web
 spec:
-  secretName: api-cert
+  secretName: letsencrypt
   dnsNames:
     - narumir.io
   issuerRef:
