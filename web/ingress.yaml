@@ -21,7 +21,7 @@ spec:
   tls:
     - hosts:
         - narumir.io
-      secret: letsencrypt
+      secretName: letsencrypt
 ---
 apiVersion: cert-manager.io/v1
 kind: Certificate
