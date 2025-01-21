@@ -13,11 +13,14 @@ spec:
         app: blog-api
     spec:
       containers:
-      - name: blog-api
-        image: ghcr.io/narumir/blog-api:0.0.2
-        resources:
-          limits:
-            memory: "1Gi"
-            cpu: "1000m"
-        ports:
-        - containerPort: 4000
+        - name: blog-api
+          image: ghcr.io/narumir/blog-api:0.0.2
+          resources:
+            limits:
+              memory: "1Gi"
+              cpu: "1000m"
+          envFrom:
+            - secretRef:
+                name: blog-api
+          ports:
+            - containerPort: 4000
