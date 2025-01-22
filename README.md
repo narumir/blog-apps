@@ -2,8 +2,8 @@
 blog 프로젝트에서 사용하는 K8S iac 프로젝트 입니다.
 
 ## 앱 레포지토리
-* [blog-api](https://github.com/narumir/blog-api)
-* [blog-web](https://github.com/narumir/blog-web)
+* [blog-web](https://github.com/narumir/blog-web) (SSR 적용된 웹 프론트엔드)
+* [blog-api](https://github.com/narumir/blog-api) (API 서버)
 
 ## 설치된 도구 목록
 * [ingress-nginx](https://kubernetes.github.io/ingress-nginx/)
@@ -19,10 +19,19 @@ blog 프로젝트에서 사용하는 K8S iac 프로젝트 입니다.
 
 name              | ip address     | description
 ------------------|----------------|----------------------
-router            | 192.168.50.1   | NAT Router
+Router            | 192.168.50.1   | NAT Router
 HAProy            | 192.168.50.102 | external loadbalancer
 K8S Control Plane | 192.168.50.120 | control plance
 K8S Node 1        | 192.168.50.121 | node 1
 K8S Node 2        | 192.168.50.122 | node 2
 K8S Node 3        | 192.168.50.123 | node 3
 
+### 서버 성능
+name              | CPU    | Momory | Disk
+------------------|--------|--------|--------
+Router            | N/A    | N/A    | N/A
+HAProy            | 2vCPUs | 2Gi    | 16Gi
+K8S Control Plane | 4vCPUs | 4Gi    | 32Gi
+K8S Node 1        | 4vCPUs | 8Gi    | 32Gi
+K8S Node 2        | 4vCPUs | 8Gi    | 32Gi
+K8S Node 3        | 4vCPUs | 8Gi    | 32Gi
