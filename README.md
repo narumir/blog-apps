@@ -30,11 +30,11 @@ K8S Node 2        | 192.168.50.122 | node 2
 K8S Node 3        | 192.168.50.123 | node 3
 
 ### 서버 성능
-name              | CPU    | Momory | Disk
-------------------|--------|--------|--------
-Router            | N/A    | N/A    | N/A
-HAProy            | 2vCPUs | 2Gi    | 16Gi
-K8S Control Plane | 4vCPUs | 4Gi    | 32Gi
-K8S Node 1        | 4vCPUs | 8Gi    | 32Gi
-K8S Node 2        | 4vCPUs | 8Gi    | 32Gi
-K8S Node 3        | 4vCPUs | 8Gi    | 32Gi
+name              | CPU    | Momory | Disk | NIC
+------------------|--------|--------|------|------------------------------------
+Router            | N/A    | N/A    | N/A  | 500mbps(external) / 1Gbps(internal)
+HAProy            | 2vCPUs | 2Gi    | 16Gi | 10Gbps
+K8S Control Plane | 4vCPUs | 4Gi    | 32Gi | 10Gbps
+K8S Node 1        | 4vCPUs | 8Gi    | 32Gi | 10Gbps
+K8S Node 2        | 4vCPUs | 8Gi    | 32Gi | 10Gbps
+K8S Node 3        | 4vCPUs | 8Gi    | 32Gi | 10Gbps
