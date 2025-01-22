@@ -5,6 +5,9 @@ blog 프로젝트에서 사용하는 K8S iac 프로젝트 입니다.
 * [blog-web](https://github.com/narumir/blog-web) (SSR 적용된 웹 프론트엔드)
 * [blog-api](https://github.com/narumir/blog-api) (API 서버)
 
+## 서비스 구조
+![service-structure](./docs/resources/service-structure.png)
+
 ## 설치된 도구 목록
 * [ingress-nginx](https://kubernetes.github.io/ingress-nginx/)
 * [cert-manager](https://cert-manager.io/)
