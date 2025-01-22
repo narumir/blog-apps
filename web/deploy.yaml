@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: blog-web
-        image: ghcr.io/narumir/blog-web:0.0.3
+        image: ghcr.io/narumir/blog-web:0.0.4
         resources:
           limits:
             memory: "1Gi"
