@@ -6,15 +6,17 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: blog-api
+      tier: backend
+      role: common
   template:
     metadata:
       labels:
-        app: blog-api
+        tier: backend
+        role: common
     spec:
       containers:
         - name: blog-api
-          image: ghcr.io/narumir/blog-api:0.0.3
+          image: ghcr.io/narumir/blog-api:0.0.4
           resources:
             limits:
               memory: "1Gi"
@@ -24,3 +26,12 @@ spec:
                 name: blog-api
           ports:
             - containerPort: 4000
+          startupProbe:
+            httpGet:
+              path: /api/v1/health
+              port: 4000
+            initialDelaySeconds: 10
+            periodSeconds: 1
+            failureThreshold: 10
+            timeoutSeconds: 1
+            terminationGracePeriodSeconds: 30

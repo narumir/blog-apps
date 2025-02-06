@@ -5,7 +5,8 @@ metadata:
   namespace: blog-web
 spec:
   selector:
-    app: blog-web
+    tier: frontend
+    role: common
   ports:
   - port: 80
     targetPort: 3000

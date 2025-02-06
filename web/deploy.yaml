@@ -6,11 +6,13 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: blog-web
+      tier: frontend
+      role: common
   template:
     metadata:
       labels:
-        app: blog-web
+        tier: frontend
+        role: common
     spec:
       containers:
       - name: blog-web
