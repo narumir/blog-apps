@@ -28,13 +28,15 @@ K8S Control Plane | 192.168.50.120 | control plance
 K8S Node 1        | 192.168.50.121 | node 1
 K8S Node 2        | 192.168.50.122 | node 2
 K8S Node 3        | 192.168.50.123 | node 3
+PostgreSQL        | 192.168.50.104 | Database
 
 ### 서버 성능
-name              | CPU    | Momory | Disk | NIC
-------------------|--------|--------|------|------------------------------------
-Router            | N/A    | N/A    | N/A  | 500mbps(external) / 1Gbps(internal)
-HAProy            | 2vCPUs | 2Gi    | 16Gi | 10Gbps
-K8S Control Plane | 4vCPUs | 4Gi    | 32Gi | 10Gbps
-K8S Node 1        | 4vCPUs | 8Gi    | 32Gi | 10Gbps
-K8S Node 2        | 4vCPUs | 8Gi    | 32Gi | 10Gbps
-K8S Node 3        | 4vCPUs | 8Gi    | 32Gi | 10Gbps
+name              | CPU    | Momory | Disk  | NIC
+------------------|--------|--------|-------|------------------------------------
+Router            | N/A    | N/A    | N/A   | 500mbps(external) / 1Gbps(internal)
+HAProy            | 2vCPUs | 2Gi    | 16Gi  | 10Gbps
+K8S Control Plane | 4vCPUs | 4Gi    | 32Gi  | 10Gbps
+K8S Node 1        | 4vCPUs | 8Gi    | 32Gi  | 10Gbps
+K8S Node 2        | 4vCPUs | 8Gi    | 32Gi  | 10Gbps
+K8S Node 3        | 4vCPUs | 8Gi    | 32Gi  | 10Gbps
+PostgreSQL        | 2vCPUs | 4Gi    | 128Gi | 10Gbps
