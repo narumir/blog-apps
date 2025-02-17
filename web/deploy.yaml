@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: blog-web
-        image: ghcr.io/narumir/blog-web:0.0.5
+        image: ghcr.io/narumir/blog-web:0.0.6
         env:
           - name: API_SERVER
             value: http://blog-api.blog-api

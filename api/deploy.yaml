@@ -14,9 +14,10 @@ spec:
         tier: backend
         role: common
     spec:
+      terminationGracePeriodSeconds: 30
       containers:
         - name: blog-api
-          image: ghcr.io/narumir/blog-api:0.0.4
+          image: ghcr.io/narumir/blog-api:0.0.5
           resources:
             limits:
               memory: "1Gi"
@@ -35,3 +36,17 @@ spec:
             failureThreshold: 10
             timeoutSeconds: 1
             terminationGracePeriodSeconds: 30
+          # readinessProbe:
+          #   httpGet:
+          #     path: /health
+          #     port: 4000
+          #   periodSeconds: 1
+          #   successThreshold: 5
+          #   failureThreshold: 3
+          # livenessProbe:
+          #   httpGet:
+          #     path: /health
+          #     port: 4000
+          #   initialDelaySeconds: 30
+          #   periodSeconds: 1
+          #   failureThreshold: 7
