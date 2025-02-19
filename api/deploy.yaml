@@ -17,7 +17,7 @@ spec:
       terminationGracePeriodSeconds: 30
       containers:
         - name: blog-api
-          image: ghcr.io/narumir/blog-api:0.0.5
+          image: ghcr.io/narumir/blog-api:0.0.6
           resources:
             limits:
               memory: "1Gi"
